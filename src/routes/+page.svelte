@@ -82,7 +82,7 @@
   <span class="px-2">Vi frågade <span class="text-cerise font-bold">56</span> st D-21:or att skapa en</span>
   <div class="my-1 p-1 text-5xl font-extrabold text-off-white bg-cerise-strong text-center">D-21 TIER LIST</div>
   <span class="px-2">för <span class="text-cerise font-bold">25</span> gemensamma kandidatkurser...</span>
-  <span class="my-4 px-4 text-neutral-400 text-lg leading-5">Rankningen bestäms av svarens {rankingMode}, och sorteras {sortMode === 'avvikelserank' ? 'med minst kontroversiella kurser (lägst standardavvikelse) först' : sortMode === 'medelrank' ? 'med bäst medelvärde först' : 'efter kursernas startdatum'}.</span>
+  <span class="my-4 px-4 text-neutral-400 text-lg leading-5">Rankningen bestäms av svarens {rankingMode}, och sorteras {sortMode === 'avvikelserank' ? 'med minst kontroversiella kurser (lägst standardavvikelse) först' : sortMode === 'medelrank' ? 'med högst medelvärde först' : 'efter kursernas startdatum'}.</span>
 </div>
 
 {#key [rankingMode, sortMode]}
@@ -127,7 +127,7 @@
 
   <span>Sortera 
     <select bind:value={detailSortMode} class="bg-[#1a1a17] border border-black p-1 rounded-md text-cerise-light">
-      <option value="äldst">äldst kursstart</option>
+      <option value="äldst">tidigast kursstart</option>
       <option value="nyast">senast kursstart</option>
       <option value="medel1">högst medelvärde</option>
       <option value="medel2">lägst medelvärde</option>
