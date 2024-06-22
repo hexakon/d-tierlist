@@ -25,7 +25,7 @@
   }
 
   let rankingMode = "median";
-  let sortMode = "avvikelse";
+  let sortMode = "avvikelserank";
   let detailSortMode = "äldst";
 
   let courseList = structuredClone(d21);
@@ -45,16 +45,16 @@
         courseList = d21.toSorted((a,b) => -(a.medelrank - b.medelrank));
         break;
       case 'median1':
-        courseList = d21.toSorted((a,b) => -(a.median - b.median) || a.medelrank - b.medelrank );
+        courseList = d21.toSorted((a,b) => -(a.median - b.median) || (sortMode === "startdatum" ? 0 : a[sortMode] - b[sortMode]) );
         break;
       case 'median2':
-        courseList = d21.toSorted((a,b) => a.median - b.median || a.medelrank - b.medelrank );
+        courseList = d21.toSorted((a,b) => a.median - b.median || (sortMode === "startdatum" ? 0 : a[sortMode] - b[sortMode]) );
         break;
       case 'typ1':
-        courseList = d21.toSorted((a,b) => -(a.typvärde - b.typvärde) || a.avvikelserank - b.avvikelserank);
+        courseList = d21.toSorted((a,b) => -(a.typvärde - b.typvärde) || (sortMode === "startdatum" ? 0 : a[sortMode] - b[sortMode]) );
         break;
       case 'typ2':
-        courseList = d21.toSorted((a,b) => a.typvärde - b.typvärde || -(a.avvikelserank - b.avvikelserank));
+        courseList = d21.toSorted((a,b) => a.typvärde - b.typvärde || (sortMode === "startdatum" ? 0 : a[sortMode] - b[sortMode]) );
         break;
       case 'av1':
         courseList = d21.toSorted((a,b) => a.avvikelserank - b.avvikelserank);
@@ -113,8 +113,8 @@
   
   <span>och sortera efter
     <select bind:value={sortMode} class="bg-[#1a1a17] border border-black p-1 rounded-md text-cerise-light">
-      <option value="medelvärde">medelvärde</option>
-      <option value="avvikelse">standardavvikelse</option>
+      <option value="medelrank">medelvärde</option>
+      <option value="avvikelserank">standardavvikelse</option>
       <option value="startdatum">kursens startdatum</option>
     </select>
   </span>

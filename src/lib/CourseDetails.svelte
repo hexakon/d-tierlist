@@ -71,13 +71,13 @@
     <div class="bg-f w-8 z-20" style={`height: ${f/5}rem;`}></div>
   </div>
   <div class="flex items-center justify-evenly h-[3.3rem]">
-    <div class="text-center w-8"><span class="figtree font-bold">S</span><br><span class="">{s}</span></div>
-    <div class="text-center w-8"><span class="figtree font-bold">A</span><br><span class="">{a}</span></div>
-    <div class="text-center w-8"><span class="figtree font-bold">B</span><br><span class="">{b}</span></div>
-    <div class="text-center w-8"><span class="figtree font-bold">C</span><br><span class="">{c}</span></div>
-    <div class="text-center w-8"><span class="figtree font-bold">D</span><br><span class="">{d}</span></div>
-    <div class="text-center w-8"><span class="figtree font-bold">E</span><br><span class="">{e}</span></div>
-    <div class="text-center w-8"><span class="figtree font-bold">F</span><br><span class="">{f}</span></div>
+    <div class="text-center w-8"><span class="figtree font-bold">S</span><br><span class="text-s">{s}</span></div>
+    <div class="text-center w-8"><span class="figtree font-bold">A</span><br><span class="text-a">{a}</span></div>
+    <div class="text-center w-8"><span class="figtree font-bold">B</span><br><span class="text-b">{b}</span></div>
+    <div class="text-center w-8"><span class="figtree font-bold">C</span><br><span class="text-c">{c}</span></div>
+    <div class="text-center w-8"><span class="figtree font-bold">D</span><br><span class="text-d">{d}</span></div>
+    <div class="text-center w-8"><span class="figtree font-bold">E</span><br><span class="text-e">{e}</span></div>
+    <div class="text-center w-8"><span class="figtree font-bold">F</span><br><span class="text-f">{f}</span></div>
   </div>
 
 </div>
