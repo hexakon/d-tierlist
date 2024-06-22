@@ -163,11 +163,12 @@
   <span class="mt-4 font-bold text-2xl text-center">TYSTNADEN ÄR BEDÖVANDE</span>
 </div>
 
-<div class="py-12 flex flex-col gap-2 justify-center items-center bg-neutral-800 text-neutral-400">
+<div class="py-12 flex flex-col gap-2 justify-center items-center bg-neutral-800 text-neutral-400 text-center">
   <div>© hexakon, <a href="https://datasektionen.se/" class="underline text-cerise">Konglig Datasektionen</a> 2024</div>
-  <div>All data samlades från en enkät som löptes från 10 juni till 20 juni</div>
+  <div>Data samlades via enkät mellan 10 juni ~ 20 juni</div>
   <div>Tack till alla anonyma studenter som deltog i undersökningen <span class="text-cerise">❤</span></div>
   <div>Skåda min skitig kod på <a href="https://github.com/hexakon/d-tierlist" target="_blank" class="underline text-cerise">guthib</a></div>
+  <div>Ikoner från <a href="https://lucide.dev/" class="underline text-cerise">Lucide</a></div>
 </div>
 
 <a href="#" class="fixed right-4 bottom-4 w-12 h-12 flex justify-center items-center opacity-50 bg-off-white text-off-black transition-opacity" class:hidden={hideToTop}><ArrowUpToLine size={32} /></a>

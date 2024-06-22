@@ -11,7 +11,7 @@
   export let namn2;
 </script>
 
-<a href={`#${namn2}`} class="bg-neutral-700 text-white flex flex-col items-center justify-center aspect-square transition-all hover:bg-opacity-75 figtree">
+<a href={`#${kurskod}`} class="bg-neutral-700 text-white flex flex-col items-center justify-center aspect-square transition-all hover:bg-opacity-75 figtree">
   <svelte:component this={icons[ikon]} />
   <span class="font-bold leading-3 mt-2">{kurskod}</span>
   <span>{namn2}</span>

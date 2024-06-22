@@ -33,8 +33,8 @@
   
 </style>
 
-<div class="p-4 transition-colors outline-neutral-600" id={namn2} class:bg-yellow-500={$page.url.hash === "#"+namn2} class:bg-opacity-5={$page.url.hash === "#"+namn2} class:lg:col-start-2={isLast}>
-  <a href={"#"+namn2} class="flex flex-row h-12 gap-2 hover:bg-neutral-600 transition-colors">
+<div class="p-4 transition-colors bg-opacity-5" id={kurskod} class:bg-yellow-500={$page.url.hash === "#"+kurskod} class:lg:col-start-2={isLast}>
+  <a href={"#"+kurskod} class="flex flex-row h-12 gap-2 hover:bg-neutral-600 transition-colors">
     <div class="flex justify-center items-center text-black bg-off-white w-12"><svelte:component this={icons[ikon]} size={30} /></div>
     <div class="flex flex-col items-start justify-center figtree">
       <span class="font-bold text-xl leading-4 figtree">{kurskod}</span>
