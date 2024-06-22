@@ -82,7 +82,7 @@
   <span class="px-2">Vi frågade <span class="text-cerise font-bold">56</span> st D-21:or att skapa en</span>
   <div class="my-1 p-1 text-5xl font-extrabold text-off-white bg-cerise-strong text-center">D-21 TIER LIST</div>
   <span class="px-2">för <span class="text-cerise font-bold">25</span> gemensamma kandidatkurser...</span>
-  <span class="my-4 px-4 text-neutral-400 text-lg leading-5">Rankningen bestäms av svarens {rankingMode}, och sorteras {sortMode === 'avvikelse' ? 'med minst kontroversiella kurser (lägst standardavvikelse) först' : sortMode === 'medelvärde' ? 'med bäst medelvärde först' : 'efter kursernas startdatum'}.</span>
+  <span class="my-4 px-4 text-neutral-400 text-lg leading-5">Rankningen bestäms av svarens {rankingMode}, och sorteras {sortMode === 'avvikelserank' ? 'med minst kontroversiella kurser (lägst standardavvikelse) först' : sortMode === 'medelrank' ? 'med bäst medelvärde först' : 'efter kursernas startdatum'}.</span>
 </div>
 
 {#key [rankingMode, sortMode]}
