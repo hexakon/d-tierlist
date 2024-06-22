@@ -48,13 +48,13 @@
         courseList = d21.toSorted((a,b) => -(a.median - b.median) || (sortMode === "startdatum" ? 0 : a[sortMode] - b[sortMode]) );
         break;
       case 'median2':
-        courseList = d21.toSorted((a,b) => a.median - b.median || (sortMode === "startdatum" ? 0 : a[sortMode] - b[sortMode]) );
+        courseList = d21.toSorted((a,b) => a.median - b.median || (sortMode === "startdatum" ? 0 : -(a[sortMode] - b[sortMode])) );
         break;
       case 'typ1':
         courseList = d21.toSorted((a,b) => -(a.typvärde - b.typvärde) || (sortMode === "startdatum" ? 0 : a[sortMode] - b[sortMode]) );
         break;
       case 'typ2':
-        courseList = d21.toSorted((a,b) => a.typvärde - b.typvärde || (sortMode === "startdatum" ? 0 : a[sortMode] - b[sortMode]) );
+        courseList = d21.toSorted((a,b) => a.typvärde - b.typvärde || (sortMode === "startdatum" ? 0 : -(a[sortMode] - b[sortMode])) );
         break;
       case 'av1':
         courseList = d21.toSorted((a,b) => a.avvikelserank - b.avvikelserank);
