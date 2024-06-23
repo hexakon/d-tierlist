@@ -62,6 +62,16 @@
       case 'av2':
         courseList = d21.toSorted((a,b) => -(a.avvikelserank - b.avvikelserank));
         break;
+      case 'svar1':
+        courseList = d21.toSorted((a,b) => -(a.totalsvar - b.totalsvar) || (sortMode === "startdatum" ? 0 : a[sortMode] - b[sortMode]) );
+        break;
+      case 'svar2':
+        courseList = d21.toSorted((a,b) => a.totalsvar - b.totalsvar || (sortMode === "startdatum" ? 0 : -(a[sortMode] - b[sortMode])) );
+      case 'az1':
+        courseList = d21.toSorted((a,b) => a.kurskod < b.kurskod ? -1 : 1);
+        break;
+      case 'az2':
+        courseList = d21.toSorted((a,b) => a.kurskod < b.kurskod ? 1 : -1);
     }
     courseList = courseList;
   }
@@ -137,6 +147,10 @@
       <option value="typ2">sämst typvärde</option>
       <option value="av1">minst kontroversiellt</option>
       <option value="av2">mest kontroversiellt</option>
+      <option value="svar1">flest svar</option>
+      <option value="svar2">färst svar</option>
+      <option value="az1">kurskod A-Z</option>
+      <option value="az2">kurskod Z-A</option>
     </select> först
   </span>
 </div>

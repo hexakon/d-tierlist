@@ -9,7 +9,6 @@
   
   export let kurskod;
   export let namn;
-  export let namn2;
   export let ikon: string;
   export let medelvärde;
   export let median;
@@ -43,7 +42,7 @@
   </a>
   <div class="my-2 text-neutral-500 flex gap-1">
     {#if totalsvar < 20}<CircleAlert />{:else}<Check />{/if} 
-    {totalsvar} studenter rankade kursen {#if totalsvar < 20}(Låg svarsfrekvens){/if}</div>
+    rankades av {totalsvar} studenter ({((totalsvar/56)*100).toFixed(2)}%)</div>
   <div class="mb-2 grid grid-cols-2 gap-2">
     <div>
       <div class="flex gap-1 figtree items-center"><TierSquare bigText={true} tier={"fedcbas"[median]}>{"FEDCBAS"[median]}</TierSquare> Median</div>
