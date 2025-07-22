@@ -320,6 +320,26 @@
     "avvikelserank": 21
   },
   {
+    "kurskod": "DD1362",
+    "namn": "Programmeringsparadigm",
+    "namn2": "progp",
+    "ikon": "Haskell",
+    "medelvärde": 3.142857143,
+    "median": 3,
+    "typvärde": 0,
+    "avvikelse": 2.101329202,
+    "totalsvar": 56,
+    "s": 9,
+    "a": 8,
+    "b": 10,
+    "c": 10,
+    "d": 5,
+    "e": 2,
+    "f": 12,
+    "medelrank": 15,
+    "avvikelserank": 24
+  },
+  {
     "kurskod": "SF1626",
     "namn": "Flervariabelanalys",
     "namn2": "flervarre",
@@ -358,26 +378,6 @@
     "f": 4,
     "medelrank": 20,
     "avvikelserank": 23
-  },
-  {
-    "kurskod": "DD1362",
-    "namn": "Programmeringsparadigm",
-    "namn2": "progp",
-    "ikon": "Haskell",
-    "medelvärde": 3.142857143,
-    "median": 3,
-    "typvärde": 0,
-    "avvikelse": 2.101329202,
-    "totalsvar": 56,
-    "s": 9,
-    "a": 8,
-    "b": 10,
-    "c": 10,
-    "d": 5,
-    "e": 2,
-    "f": 12,
-    "medelrank": 15,
-    "avvikelserank": 24
   },
   {
     "kurskod": "SF1924",
