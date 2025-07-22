@@ -1,14 +1,14 @@
 <script lang="ts">
-  import d21 from '$lib/data/d21.json';
 	import CourseTierCard from './CourseTierCard.svelte';
 
   export let tier: string;
   export let rankingMode: string;
   export let sortMode: string;
+  export let yeardata: Array<Object>;
 
   const tiers = "fedcbas"
 
-  let courses = d21.filter((c) => Math.round(c[rankingMode]) == tiers.indexOf(tier))
+  let courses = yeardata.filter((c) => Math.floor(c[rankingMode]) == tiers.indexOf(tier))
   
   if (sortMode !== 'startdatum') courses.sort((a,b) => a[sortMode] - b[sortMode]);
 </script>
