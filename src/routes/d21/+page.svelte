@@ -90,7 +90,7 @@
 
 <div class="mt-8 w-full text-center flex flex-col text-neutral-500">
   <span class="px-2">Vi frågade <span class="text-cerise font-bold">56</span> st D-21:or att skapa en</span>
-  <a href="/" class="block my-1 p-1 text-5xl font-extrabold text-off-white bg-cerise-strong text-center after:content-['D-21_TIER_LIST'] hover:after:content-['NYARE_ÅRSKURS?'] hover:bg-off-yellow hover:text-off-black transition-colors"></a>
+  <a href="/d-tierlist/" class="block my-1 p-1 text-5xl font-extrabold text-off-white bg-cerise-strong text-center after:content-['D-21_TIER_LIST'] hover:after:content-['NYARE_ÅRSKURS?'] hover:bg-off-yellow hover:text-off-black transition-colors"></a>
   <span class="px-2">för <span class="text-cerise font-bold">25</span> gemensamma kandidatkurser...</span>
   <span class="my-4 px-4 text-neutral-400 text-lg leading-5">Rankningen bestäms av svarens {rankingMode}, och sorteras {sortMode === 'avvikelserank' ? 'med minst kontroversiella kurser (lägst standardavvikelse) först' : sortMode === 'medelrank' ? 'med högst medelvärde först' : 'efter kursernas startdatum'}.</span>
 </div>
@@ -180,7 +180,7 @@
 <div class="py-12 flex flex-col gap-2 justify-center items-center bg-neutral-800 text-neutral-400 text-center">
   <div>© hexakon, <a href="https://datasektionen.se/" class="underline text-cerise">Konglig Datasektionen</a> 2024-2025</div>
   <div>Data för <span class="text-off-yellow">D-21 Tier List</span> samlades via enkät mellan 10 juni ~ 20 juni 2024</div>
-  <div>Permalänk till tier lists: <a href="/d21" class="text-cerise underline">D-21</a>, <a href="/d22" class="text-cerise underline">D-22</a></div>
+  <div>Permalänk till tier lists: <a href="/d-tierlist/d21" class="text-cerise underline">D-21</a>, <a href="/d-tierlist/d22" class="text-cerise underline">D-22</a></div>
   <div>Tack till alla anonyma studenter som deltog i undersökningen <span class="text-cerise">❤</span></div>
   <div>Skåda min skitig kod på <a href="https://github.com/hexakon/d-tierlist" target="_blank" class="underline text-cerise">guthib</a></div>
   <div>Ikoner från <a href="https://lucide.dev/" class="underline text-cerise">Lucide</a></div>

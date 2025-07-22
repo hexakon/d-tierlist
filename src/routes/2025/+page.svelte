@@ -166,7 +166,7 @@
 <div class="mt-16 py-12 flex flex-col gap-2 justify-center items-center bg-neutral-800 text-neutral-400 text-center">
   <div>© hexakon, <a href="https://datasektionen.se/" class="underline text-cerise">Konglig Datasektionen</a> 2024-2025</div>
   <div>Data för <span class="text-off-yellow">Datas 2025 Tier List</span> samlades in via enkät mellan 5 juni ~ 30 juni 2025</div>
-  <div>Permalänk till tier lists: <a href="/d21" class="text-cerise underline">D-21</a>, <a href="/d22" class="text-cerise underline">D-22</a>, <a href="/2025" class="text-cerise underline">Datas 2025</a></div>
+  <div>Permalänk till tier lists: <a href="/d-tierlist/d21" class="text-cerise underline">D-21</a>, <a href="/d-tierlist/d22" class="text-cerise underline">D-22</a>, <a href="/d-tierlist/2025" class="text-cerise underline">Datas 2025</a></div>
   <div>Tack till alla anonyma studenter som deltog i undersökningen <span class="text-cerise">❤</span></div>
   <div>Skåda min skitig kod på <a href="https://github.com/hexakon/d-tierlist" target="_blank" class="underline text-cerise">guthib</a></div>
   <div>Ikoner från <a href="https://lucide.dev/" class="underline text-cerise">Lucide</a></div>
