@@ -1,4 +1,4 @@
-<title>D-22 Tier List</title>
+<title>D-21 Tier List</title>
 <svelte:head>
   <script lang="ts">
     document.documentElement.classList.add("dark", localStorage.theme === "dark" || !localStorage.theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
@@ -9,7 +9,7 @@
 
   import { ArrowUpToLine } from 'lucide-svelte';
   
-  import yeardata from '$lib/data/d22.json';
+  import yeardata from '$lib/data/d21.json';
 
   import CourseDetails from '$lib/CourseDetails.svelte';
   import TierRow from '$lib/TierRow.svelte';
@@ -89,8 +89,8 @@
 </style>
 
 <div class="mt-8 w-full text-center flex flex-col text-neutral-500">
-  <span class="px-2">Vi frågade <span class="text-cerise font-bold">45</span> st D-22:or att skapa en</span>
-  <div class="my-1 p-1 text-5xl font-extrabold text-off-white bg-cerise-strong text-center">D-22 TIER LIST</div>
+  <span class="px-2">Vi frågade <span class="text-cerise font-bold">56</span> st D-21:or att skapa en</span>
+  <div class="my-1 p-1 text-5xl font-extrabold text-off-white bg-cerise-strong text-center">D-21 TIER LIST</div>
   <span class="px-2">för <span class="text-cerise font-bold">25</span> gemensamma kandidatkurser...</span>
   <span class="my-4 px-4 text-neutral-400 text-lg leading-5">Rankningen bestäms av svarens {rankingMode}, och sorteras {sortMode === 'avvikelserank' ? 'med minst kontroversiella kurser (lägst standardavvikelse) först' : sortMode === 'medelrank' ? 'med högst medelvärde först' : 'efter kursernas startdatum'}.</span>
 </div>
@@ -158,12 +158,26 @@
 <div class="grid grid-cols-1 xs2:grid-cols-2 lg:grid-cols-3 max-w-[80rem] mx-auto center-last-item">
   {#key courseList}
     {#each courseList as course, index}
-      <CourseDetails {...course} isLast={index === 24} totalsvar_max=45 />
+      <CourseDetails {...course} isLast={index === 24} totalsvar_max=56 />
     {/each}
   {/key}
 </div>
 
-<div class="mt-16 py-12 flex flex-col gap-2 justify-center items-center bg-neutral-800 text-neutral-400 text-center">
+<div class="mt-12 mb-16 flex flex-col items-center">
+  <span class="text-neutral-600">Obligatorisk bonusfråga:</span>
+  <span class="font-bold text-2xl text-center">HATAR DU DATA?</span>
+  <div class="bg-f my-2 w-full max-w-[80rem] h-8 outline outline-black">
+    <div class="bg-s h-full w-[7.14%]"></div>
+  </div>
+  <div class="w-full max-w-[80rem] flex justify-between px-1 leading-5">
+    <div class="text-s"><b>JA</b><br>4 st (7.1%)</div>
+    <div class="text-f text-right"><b>INGEN KOMMENTAR</b><br>52 st (92.9%)</div>
+  </div>
+  
+  <span class="mt-4 font-bold text-2xl text-center">TYSTNADEN ÄR BEDÖVANDE</span>
+</div>
+
+<div class="py-12 flex flex-col gap-2 justify-center items-center bg-neutral-800 text-neutral-400 text-center">
   <div>© hexakon, <a href="https://datasektionen.se/" class="underline text-cerise">Konglig Datasektionen</a> 2024</div>
   <div>Data samlades via enkät mellan 10 juni ~ 20 juni</div>
   <div>Tack till alla anonyma studenter som deltog i undersökningen <span class="text-cerise">❤</span></div>

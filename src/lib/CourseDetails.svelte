@@ -1,11 +1,11 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import { CircleSlash2, CodeXml, PencilLine, Move3D, ListOrdered, LineChart, Pointer, Microscope, Split, ClipboardList, Network, Cpu, Database, Blocks, Rotate3D, FileBox, Dices, Waypoints, BarChartHorizontal, MonitorCheck, Sprout, GraduationCap, Users, Check, CircleAlert } from 'lucide-svelte';
+  import { CircleSlash2, CodeXml, PencilLine, Move3D, ListOrdered, LineChart, Pointer, Microscope, Split, ClipboardList, Network, Cpu, Database, Blocks, Rotate3D, FileBox, Dices, Waypoints, BarChartHorizontal, MonitorCheck, Sprout, GraduationCap, Users, Check, CircleAlert, Pi } from 'lucide-svelte';
   import Haskell from '$lib/icon/Haskell.svelte';
   import Owl from '$lib/icon/Owl.svelte';
 	import TierSquare from "$lib/TierSquare.svelte";
 
-  const icons = { CircleSlash2, CodeXml, PencilLine, Move3D, ListOrdered, LineChart, Pointer, Microscope, Split, ClipboardList, Network, Cpu, Database, Blocks, Rotate3D, FileBox, Dices, Waypoints, BarChartHorizontal, MonitorCheck, Sprout, GraduationCap, Users, Haskell, Owl }
+  const icons = { CircleSlash2, CodeXml, PencilLine, Move3D, ListOrdered, LineChart, Pointer, Microscope, Split, ClipboardList, Network, Cpu, Database, Blocks, Rotate3D, FileBox, Dices, Waypoints, BarChartHorizontal, MonitorCheck, Sprout, GraduationCap, Users, Haskell, Owl, Pi }
   
   export let kurskod;
   export let namn;
@@ -24,6 +24,7 @@
   export let f;
   export let medelrank;
   export let avvikelserank;
+  export let totalsvar_max;
 
   export let isLast = false;
 </script>
@@ -42,16 +43,22 @@
   </a>
   <div class="my-2 text-neutral-500 flex gap-1">
     {#if totalsvar < 20}<CircleAlert />{:else}<Check />{/if} 
-    rankades av {totalsvar} studenter ({((totalsvar/56)*100).toFixed(2)}%)</div>
+    rankades av {totalsvar} studenter ({((totalsvar/totalsvar_max)*100).toFixed(2)}%)</div>
   <div class="mb-2 grid grid-cols-2 gap-2">
     <div>
-      <div class="flex gap-1 figtree items-center"><TierSquare bigText={true} tier={"fedcbas"[median]}>{"FEDCBAS"[median]}</TierSquare> Median</div>
+      <div class="flex gap-1 figtree items-center">
+        {#if Number.isInteger(median)}
+          <TierSquare bigText={true} tier={"fedcbas"[median]}>{"FEDCBAS"[median]}</TierSquare>
+        {:else}
+          <TierSquare isInteger={false} bigText={true} tier={"fedcbas"[Math.floor(median)]}>{"FEDCBAS"[Math.floor(median)]}</TierSquare>
+        {/if}
+        Median</div>
     </div>
     <div>
       <div class="flex gap-1 figtree items-center"><TierSquare bigText={true} tier={"fedcbas"[typvärde]}>{"FEDCBAS"[typvärde]}</TierSquare> Typvärde</div>
     </div>
     <div>
-      <div class="flex gap-1 figtree items-center leading-5"><TierSquare tier={"fedcbas"[Math.round(medelvärde)]}>#{medelrank}</TierSquare> Medelvärde:<br>{medelvärde.toFixed(3)} ({"FEDCBAS"[Math.round(medelvärde)]})</div>
+      <div class="flex gap-1 figtree items-center leading-5"><TierSquare tier={"fedcbas"[Math.round(medelvärde)]}>#{medelrank}</TierSquare> Medelvärde:<br>{parseFloat(medelvärde).toFixed(3)} ({"FEDCBAS"[Math.round(medelvärde)]})</div>
     </div>
     <div>
       <div class="flex gap-1 figtree items-center leading-5"><TierSquare opacityrank={avvikelserank}>#{avvikelserank}</TierSquare> St. avvikelse:<br>{avvikelse.toFixed(3)}</div>

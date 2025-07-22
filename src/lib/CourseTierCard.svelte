@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { CircleSlash2, CodeXml, PencilLine, Move3D, ListOrdered, LineChart, Pointer, Microscope, Split, ClipboardList, Network, Cpu, Database, Blocks, Rotate3D, FileBox, Dices, Waypoints, BarChartHorizontal, MonitorCheck, Sprout, GraduationCap, Users } from 'lucide-svelte';
+  import { CircleSlash2, CodeXml, PencilLine, Move3D, ListOrdered, LineChart, Pointer, Microscope, Split, ClipboardList, Network, Cpu, Database, Blocks, Rotate3D, FileBox, Dices, Waypoints, BarChartHorizontal, MonitorCheck, Sprout, GraduationCap, Users, Pi } from 'lucide-svelte';
 
   import Haskell from '$lib/icon/Haskell.svelte';
   import Owl from '$lib/icon/Owl.svelte';
 
-  const icons = { CircleSlash2, CodeXml, PencilLine, Move3D, ListOrdered, LineChart, Pointer, Microscope, Split, ClipboardList, Network, Cpu, Database, Blocks, Rotate3D, FileBox, Dices, Waypoints, BarChartHorizontal, MonitorCheck, Sprout, GraduationCap, Users, Haskell, Owl }
+  const icons = { CircleSlash2, CodeXml, PencilLine, Move3D, ListOrdered, LineChart, Pointer, Microscope, Split, ClipboardList, Network, Cpu, Database, Blocks, Rotate3D, FileBox, Dices, Waypoints, BarChartHorizontal, MonitorCheck, Sprout, GraduationCap, Users, Pi, Haskell, Owl }
   
   export let ikon: string;
   export let kurskod;
